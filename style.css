@@ -1,0 +1,137 @@
+:root{
+
+--Navy950: hsl(233, 47%, 7%);
+--Blue950: hsl(244, 37%, 16%);
+--Purple500: hsl(277, 64%, 61%);
+
+--Whitea : hsl(0, 0%, 100%);
+--Whiteb : hsla(0, 0%, 100%, 0.75);
+--Whitec : hsla(0, 0%, 100%, 0.6);
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    width:100vw;
+    height: 100vh;
+
+    background-color: var(--Navy950);
+    
+
+    display:flex;
+    flex-direction: row; /* that are set by default*/
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapping{
+    width: 70%;
+    height: 50%;
+   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.business-des{
+    width: 50%;
+    height: 100%;
+     
+    border-radius: 1rem 0 0 1rem;
+    color: var(--Whitea);
+    background-color: var(--Blue950);
+    
+    padding:min(1rem,4%);
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.business-des > *{
+    width: 80%;
+    
+}
+
+.text > h1{
+    font-size:150%;
+    height: 20%;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    height:40%;
+}
+.text > h1 > span{
+    color: var(--Purple500);
+}
+.text > p{
+    font-size:1rem;
+    color: var(--Whiteb);
+}
+.overview{
+    display: flex;
+    justify-content: space-around;
+    
+    font-size: 1rem;
+}
+.overview > div >p{
+    font-weight: bold;
+}
+.overview > div > label{
+    font-size:1rem;
+    font-weight:100;
+
+}
+.business-img{
+   width: 50%;
+   height: 100%;
+    
+   background-image: url(images/image-header-desktop.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.one{
+    width: 100%;
+    height: 100%;  
+    opacity: .7;
+    background-color:var(--Purple500);
+}
+.business-img > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 1rem 1rem 0;
+}
+@media(max-width:600px){
+    .wrapping{
+         display: flex;
+         flex-direction:column-reverse;
+         width: 100%;
+         height: 100%;
+
+         padding:2rem;
+    }
+    .wrapping *{
+        width: 90%;
+    }
+    .one{
+        width: 100%;
+    }
+    .business-des{
+        width: 90%;
+        height: max-content;
+            
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .overview{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        
+    }
+}
